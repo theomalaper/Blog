@@ -8,6 +8,7 @@ import {
 import './styles/index.css';
 import Root from './routes/root';
 import ErrorPage from './routes/error-page'
+import BlogPost from './routes/blog-post'
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     errorElement: <ErrorPage />
+  },
+  {
+    path: "post/:postId",
+    element: <BlogPost />
   }
 ])
 
