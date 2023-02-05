@@ -1,4 +1,4 @@
-import '../styles/root.css';
+import '../styles/root.scss';
 import NavBar from '../components/nav-bar'
 
 function Root() {

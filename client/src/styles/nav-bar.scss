@@ -1,0 +1,12 @@
+@import './variables';
+@import './resets';
+
+.nav__bar {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+        color: $secondary-color;
+    }
+}
+
