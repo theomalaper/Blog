@@ -20,12 +20,17 @@
 
     &__left {
         @include flexLine;
-        width: 11%;
+        width: 11.5%;
+        font-family: "Nunito";
+        font-size: 20px;
     }
 
     &__right {
         @include flexLine;
         width: 20%;
+        font-family: "Inter";
+        font-size: 14px;
+        font-weight: map-get($font-weights, medium);
 
         .contact__button {
             @include flexCenter;

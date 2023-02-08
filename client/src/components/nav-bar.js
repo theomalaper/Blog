@@ -6,7 +6,7 @@ const NavBar = () => {
     <div className="nav__bar">
       <div className="nav__bar__left">
         <img alt="Earth logo" src={process.env.PUBLIC_URL + "earth1.png"}/>
-        <h3>Theo's blog</h3>
+        <p>Theo's blog</p>
       </div>
       <div className="nav__bar__right">
         <p>Home</p>

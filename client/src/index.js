@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
-  createBrowserRouter,
-  Router,
-  RouterProvider,
+  Routes,
+  Route,
+  BrowserRouter,
 } from "react-router-dom";
 import './styles/index.scss';
 import Root from './routes/root';
@@ -11,22 +11,16 @@ import ErrorPage from './routes/error-page'
 import BlogPost from './routes/blog-post'
 import reportWebVitals from './reportWebVitals';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: "post/:postId",
-    element: <BlogPost />
-  }
-])
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Root />}/>
+        <Route path="/blog-post" element={<BlogPost />}/>
+        <Route path="/*" element={<ErrorPage />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
