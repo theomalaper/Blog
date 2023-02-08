@@ -1,2 +1,36 @@
-.App {
+@import './resets';
+@import './mixin';
+@import './variables';
+
+
+.root {
+    &__header {
+        @include flexLine;
+        margin-top: 12rem;
+        height: 15vh;
+
+        &__left {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            p {
+                font-family: "Roboto";
+                font-weight: map-get($font-weights, bold);
+                font-size: 35px;
+            }
+        }
+
+        &__right {
+            width: 25vw;
+            font-family: "Roboto";
+            font-weight: map-get($font-weights, bold);
+            color: $title-color;
+        }
+    }
+
+    &__menu {
+        margin-top: 7rem;
+    }
 }
