@@ -1,5 +1,6 @@
 import '../styles/root.scss';
 import NavBar from '../components/nav-bar'
+import ArticleCard from '../components/article-card'
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
@@ -39,8 +40,8 @@ function Root() {
       <div className="root__menu">
         <Box sx={{ width: '100%', typography: 'body1' }}>
           <TabContext value={tab}>
-            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-              <TabList onChange={handleTabChange} aria-label="lab API tabs example">
+            <Box sx={{ borderBottom: 1, borderColor: 'divider'}}>
+              <TabList onChange={handleTabChange}>
                 <Tab label="View all" value="1" />
                 <Tab label="Climate change" value="2" />
                 <Tab label="Sustainability" value="3" />
@@ -50,7 +51,13 @@ function Root() {
                 <Tab label="Biographies" value="7" />
               </TabList>
             </Box>
-            <TabPanel value="1">Item One</TabPanel>
+            <TabPanel sx={{ pl: 0, pr: 0, pt: 7 }}value="1">
+              <ArticleCard 
+                title="Ocean Acidification" 
+                prefice="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s "
+                photo=""
+              />
+            </TabPanel>
             <TabPanel value="2">Item Two</TabPanel>
             <TabPanel value="3">Item Three</TabPanel>
             <TabPanel value="4">Item Four</TabPanel>

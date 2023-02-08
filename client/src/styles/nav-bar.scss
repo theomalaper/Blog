@@ -27,11 +27,16 @@
             height: 40px;
             width: 90px;
             border-radius: 40px;
+
+            &:hover {
+                background-color: $title-color;
+                color: white;
+            }
         }
     }
 
     p:hover {
-        color: $title-color;
+        cursor: pointer;
     }
 }
 
